@@ -16,3 +16,9 @@ header button {
     border-width: 1px;
     font-family: Roboto, serif;
 }
+
+#header-logo {
+    height: 40px;
+    float: left;
+
+}
