@@ -12,41 +12,37 @@
 </head>
 
 <body>
-<header>
-    <button onclick="window.location.href='Register.html'">Register</button>&nbsp;&nbsp;
-
-    <button onclick="window.location.href='Logon.html'">Logon</button>&nbsp;&nbsp;
-
-    <button id= "logoff-btn" onclick="window.location.href='Logout.html'">Logout</button>&nbsp;&nbsp;
-
-    <button id= "deineListe-btn" onclick="window.location.href='../Movies/ShowAllMovies.html'">Deine Liste</button>
-</header>
-    <h1>Register</h1>
-
-    <table>
-        <tr>
-            <td>email:</td>
-            <td><input type="text"/></td>
-        </tr>
-        <tr>
-            <td>passwort:</td>
-            <td><input type="text"/></td>
-        </tr>
-        <tr>
-            <td>Name:</td>
-            <td><input type="text"/></td>
-        </tr>
-    </table>
-
-    <div>
-    <button onclick="register()">Registrieren</button>
+<div class="parent">
+    <div class="header">
+            <button onclick="window.location.href='Register.html'">Register</button>&nbsp;&nbsp;
+            <button onclick="window.location.href='Logon.html'">Logon</button>&nbsp;&nbsp;
+            <button id= "logoff-btn" onclick="window.location.href='Logout.html'">Logout</button>&nbsp;&nbsp;
+            <button id= "deineListe-btn" onclick="window.location.href='../Movies/ShowAllMovies.html'">Deine Liste</button>
     </div>
-    <a href="Logon.html"> Sie haben schon ein Konto</a> ?<br/>
+    <div class="titel">
+        <h1>Registrieren</h1>
+    </div>
+    <div class="beschreibung">
+        <a href="Logon.html"> Sie haben schon ein Konto</a> ?<br/>
+    </div>
+    <div class="form">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>Passwort:</td>
+                <td><input type="text"/></td>
+            </tr>
+        </table>
 
-
-    <br/><br/><br/>
-
-    Here you can<a href="../../Homepage.html"> bo back to the homepage </a>.<br/>
-
+        <button onclick="register()">Registrieren</button>
+    </div>
+</div>
 </body>
 </html>

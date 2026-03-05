@@ -1,17 +1,49 @@
-h1 {
-    color: #05dc37;
-}
-
-body {
-    background: #f0f0f0;
-}
-
-
-
 #logoff-btn {
     display: none;
 }
 
 #deineListe-btn {
     display: none;
+}
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.header {
+    grid-column: span 12 / span 12;
+}
+
+.header button {
+    width: 120px;
+    height: 30px;
+    margin-left: 20px;
+    float: right;
+    border-radius: 8px;
+    border-width: 1px;
+    font-family: Roboto, serif;
+}
+
+.titel {
+    grid-column: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.beschreibung {
+    grid-column: span 4 / span 4;
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.form {
+    grid-column: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    grid-column-start: 7;
+    grid-row-start: 3;
 }
