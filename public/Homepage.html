@@ -10,24 +10,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 <div class="page">
     <header class="main-header">
-        <img id="header-logo" src="/public/scr/logo_none_bg.png" alt="Movie Watchlist Logo" onclick="window.location.href='Homepage.html'">
-        <div class="header-actions">
-            <button onclick="window.location.href='html/auth/Register.html'">Register</button>
-            <button onclick="window.location.href='html/auth/Logon.html'">Logon</button>
-            <button onclick="window.location.href='html/auth/Logout.html'">Logout</button>
-            <button onclick="window.location.href='html/Movies/ShowAllMovies.html'">Deine Liste</button>
-        </div>
+        <button class="brand" onclick="window.location.href='Homepage.html'" aria-label="Zur Startseite">
+            <img id="header-logo" src="/public/scr/logo_none_bg.png" alt="Movie Watchlist Logo">
+        </button>
+
+        <nav class="header-actions" aria-label="Hauptnavigation">
+            <button class="action-btn" onclick="window.location.href='html/auth/Register.html'">Register</button>
+            <button class="action-btn" onclick="window.location.href='html/auth/Logon.html'">Logon</button>
+            <button class="action-btn" onclick="window.location.href='html/auth/Logout.html'">Logout</button>
+            <button class="action-btn action-btn-primary" onclick="window.location.href='html/Movies/ShowAllMovies.html'">Deine Liste</button>
+        </nav>
     </header>
 
     <main class="hero">
         <p class="hero-tag">Movie Watchlist</p>
-        <h1>Deine Movie Watchlist</h1>
-        <p class="hero-copy">Organisiere deine naechsten Filme und Serien in einer klaren, modernen Watchlist.</p>
-        <button class="hero-cta" onclick="window.location.href='html/auth/Register.html'">Get Started</button>
+        <h1 class="hero-title">Deine Filme. Dein Look. Dein Abend.</h1>
+        <p class="hero-copy">Baue dir deine persoenliche Watchlist im Netflix-Style und finde immer sofort, was du als Naechstes schauen willst.</p>
+        <button class="hero-cta" onclick="window.location.href='html/auth/Register.html'">Jetzt starten</button>
     </main>
 </div>
 </body>
