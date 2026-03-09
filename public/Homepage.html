@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Movie Watchlist</title>
-
+    <link rel="stylesheet" href="/public/css/global.css">
+    <link rel="stylesheet" href="/public/css/homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<header>
-    <button onclick="window.location.href='html/auth/Register.html'">Register</button>
-    <button onclick="window.location.href='html/auth/Logon.html'">Logon</button>&nbsp;&nbsp;
-    <button onclick="window.location.href='html/auth/Logout.html'">Logout</button>&nbsp;&nbsp;
-    <button onclick="window.location.href='html/Movies/ShowAllMovies.html'">Deine Liste</button>
-    <img id= "header-logo" src="/public/scr/logo_none_bg.png" onclick="window.location.href='Homepage.html'">
-    
+<div class="page">
+    <header class="main-header">
+        <img id="header-logo" src="/public/scr/logo_none_bg.png" alt="Movie Watchlist Logo" onclick="window.location.href='Homepage.html'">
+        <div class="header-actions">
+            <button onclick="window.location.href='html/auth/Register.html'">Register</button>
+            <button onclick="window.location.href='html/auth/Logon.html'">Logon</button>
+            <button onclick="window.location.href='html/auth/Logout.html'">Logout</button>
+            <button onclick="window.location.href='html/Movies/ShowAllMovies.html'">Deine Liste</button>
+        </div>
+    </header>
 
-</header>
-
-
-    <h1>Deine Movie Watchlist</h1>
-
-    A website to organize a Watchlist for your next Bingeing <br/>
-
-    <button onclick="window.location.href='html/auth/Register.html'">Get Started</button>&nbsp;&nbsp;
-
-
+    <main class="hero">
+        <p class="hero-tag">Movie Watchlist</p>
+        <h1>Deine Movie Watchlist</h1>
+        <p class="hero-copy">Organisiere deine naechsten Filme und Serien in einer klaren, modernen Watchlist.</p>
+        <button class="hero-cta" onclick="window.location.href='html/auth/Register.html'">Get Started</button>
+    </main>
+</div>
 </body>
 </html>
