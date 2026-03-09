@@ -2,48 +2,52 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Mosbach Task Organizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Watchlist - Registrieren</title>
+    <link rel="stylesheet" href="/public/css/global.css">
     <link rel="stylesheet" href="/public/css/register.css">
     <script src="/public/js/MyFunctions.js"></script>
-    <link rel="stylesheet" href="/public/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 <div class="parent">
     <div class="header">
-            <button onclick="window.location.href='Register.html'">Register</button>&nbsp;&nbsp;
-            <button onclick="window.location.href='Logon.html'">Logon</button>&nbsp;&nbsp;
-            <button id= "logoff-btn" onclick="window.location.href='Logout.html'">Logout</button>&nbsp;&nbsp;
-            <button id= "deineListe-btn" onclick="window.location.href='../Movies/ShowAllMovies.html'">Deine Liste</button>
-            <img id= "header-logo" src="/public/scr/logo_none_bg.png" onclick="window.location.href='../../Homepage.html'">
+        <img id="header-logo" src="/public/scr/logo_none_bg.png" alt="Movie Watchlist Logo" onclick="window.location.href='../../Homepage.html'">
+        <div class="header-actions">
+            <button onclick="window.location.href='Register.html'">Register</button>
+            <button onclick="window.location.href='Logon.html'">Logon</button>
+            <button id="logoff-btn" onclick="window.location.href='Logout.html'">Logout</button>
+            <button id="deineListe-btn" onclick="window.location.href='../Movies/ShowAllMovies.html'">Deine Liste</button>
+        </div>
     </div>
-    <div class="titel">
-        <h1>Registrieren</h1>
-    </div>
-    <div class="beschreibung">
-        <a href="Logon.html"> Sie haben schon ein Konto</a> ?<br/>
-    </div>
-    <div class="form">
-        <table>
-            <tr>
-                <td>Name:</td>
-                <td><input type="text"/></td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td><input type="text"/></td>
-            </tr>
-            <tr>
-                <td>Passwort:</td>
-                <td><input type="text"/></td>
-            </tr>
-        </table>
 
-        <button onclick="register()">Registrieren</button>
-    </div>
+    <main class="auth-wrapper">
+        <section class="auth-card">
+            <div class="titel">
+                <h1>Unbegrenzt Filme merken</h1>
+                <p class="lead">Erstelle dein Konto und baue deine persönliche Watchlist im Netflix-Look.</p>
+                <p class="beschreibung"><a href="Logon.html">Schon ein Konto? Jetzt einloggen</a></p>
+            </div>
+
+            <div class="form">
+                <h2>Registrieren</h2>
+                <form onsubmit="event.preventDefault(); register();">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="Dein Name" required>
+
+                    <label for="email">E-Mail</label>
+                    <input id="email" type="email" placeholder="name@beispiel.de" required>
+
+                    <label for="password">Passwort</label>
+                    <input id="password" type="password" placeholder="Mindestens 8 Zeichen" required>
+
+                    <button type="submit" class="register-btn">Registrieren</button>
+                </form>
+            </div>
+        </section>
+    </main>
 </div>
 </body>
 </html>
