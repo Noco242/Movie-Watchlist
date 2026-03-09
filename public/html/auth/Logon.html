@@ -1,45 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Mosbach Task Organizer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie Watchlist | Logon</title>
     <link rel="stylesheet" href="/public/css/Logon.css">
     <link rel="stylesheet" href="/public/css/global.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<header>
-    <button onclick="window.location.href='Register.html'">Register</button>&nbsp;&nbsp;
+<div class="page">
+    <header class="main-header">
+        <button class="brand" onclick="window.location.href='../../Homepage.html'" aria-label="Zur Startseite">
+            <img id="header-logo" src="/public/scr/logo_none_bg.png" alt="Movie Watchlist Logo">
+        </button>
 
-    <button onclick="window.location.href='Logon.html'">Logon</button>&nbsp;&nbsp;
+        <nav class="header-actions" aria-label="Hauptnavigation">
+            <button class="action-btn" onclick="window.location.href='Register.html'">Register</button>
+            <button class="action-btn" onclick="window.location.href='Logon.html'">Logon</button>
+            <button class="action-btn" onclick="window.location.href='Logout.html'">Logout</button>
+            <button class="action-btn action-btn-primary" onclick="window.location.href='../Movies/ShowAllMovies.html'">Deine Liste</button>
+        </nav>
+    </header>
 
-    <button id = "logoff-btn" onclick="window.location.href='Logout.html'">Logout</button>&nbsp;&nbsp;
+    <main class="content">
+        <section class="login-card" aria-labelledby="logon-title">
+            <p class="card-tag">Willkommen zurueck</p>
+            <h1 id="logon-title">Logon</h1>
 
-    <button id = "deine_liste-btn" onclick="window.location.href='../Movies/ShowAllMovies.html'">Deine Liste</button>
-    <img id= "header-logo" src="/public/scr/logo_none_bg.png" onclick="window.location.href='../../Homepage.html'">
-</header>
-    <h1>Log on</h1>
+            <form class="login-form" action="#" method="post">
+                <label for="email">E-Mail</label>
+                <input id="email" name="email" type="email" placeholder="name@example.com" required>
 
-    <table>
-        <tr>
-            <td>email:</td>
-            <td><input type="text"/></td>
-        </tr>
-        <tr>
-            <td>passwort:</td>
-            <td><input type="text"/></td>
-        </tr>
-    </table>
+                <label for="password">Passwort</label>
+                <input id="password" name="password" type="password" placeholder="Dein Passwort" required>
 
-    <button>Anmelden</button>
-    <a href="Register.html"> Sie haben noch kein Konto?</a><br/>
+                <button class="submit-btn" type="submit">Anmelden</button>
+            </form>
 
-    <br/><br/><br/>
-
-    Here you can<a href="../../Homepage.html"> bo back to the homepage </a>.<br/>
-
+            <p class="helper-links">
+                <a href="Register.html">Sie haben noch kein Konto?</a>
+            </p>
+            <p class="helper-links">
+                <a href="../../Homepage.html">Zurueck zur Homepage</a>
+            </p>
+        </section>
+    </main>
+</div>
 </body>
 </html>
